@@ -1,0 +1,253 @@
+
+   Illuminate\Database\QueryException  : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '56739433' for key 'news_list_id_unique' (SQL: insert into `news` (`list_id`, `slug`, `subject`, `price_string`, `area_name`) values (56739433, https://xe.chotot.com/quan-hai-chau/mua-ban-xe-may/56739433.htm, HONDA WAVE RSX  BS 43  vành đúc đĩa MỚI KENG, 10.800.000 đ, Quận Hải Châu))
+
+  at D:\private\calendar\vendor\laravel\framework\src\Illuminate\Database\Connection.php:664
+    660|         // If an exception occurs when attempting to run a query, we'll format the error
+    661|         // message to include the bindings with SQL, which will make this exception a
+    662|         // lot more helpful to the developer instead of just the database's errors.
+    663|         catch (Exception $e) {
+  > 664|             throw new QueryException(
+    665|                 $query, $this->prepareBindings($bindings), $e
+    666|             );
+    667|         }
+    668|
+
+  Exception trace:
+
+  1   PDOException::("SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '56739433' for key 'news_list_id_unique'")
+      D:\private\calendar\vendor\laravel\framework\src\Illuminate\Database\Connection.php:458
+
+  2   PDOStatement::execute()
+      D:\private\calendar\vendor\laravel\framework\src\Illuminate\Database\Connection.php:458
+
+  Please use the argument -v to see more details.
+
+   Illuminate\Database\QueryException  : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '56739433' for key 'news_list_id_unique' (SQL: insert into `news` (`list_id`, `slug`, `subject`, `price_string`, `area_name`) values (56739433, https://xe.chotot.com/quan-hai-chau/mua-ban-xe-may/56739433.htm, HONDA WAVE RSX  BS 43  vành đúc đĩa MỚI KENG, 10.800.000 đ, Quận Hải Châu))
+
+  at D:\private\calendar\vendor\laravel\framework\src\Illuminate\Database\Connection.php:664
+    660|         // If an exception occurs when attempting to run a query, we'll format the error
+    661|         // message to include the bindings with SQL, which will make this exception a
+    662|         // lot more helpful to the developer instead of just the database's errors.
+    663|         catch (Exception $e) {
+  > 664|             throw new QueryException(
+    665|                 $query, $this->prepareBindings($bindings), $e
+    666|             );
+    667|         }
+    668|
+
+  Exception trace:
+
+  1   PDOException::("SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '56739433' for key 'news_list_id_unique'")
+      D:\private\calendar\vendor\laravel\framework\src\Illuminate\Database\Connection.php:458
+
+  2   PDOStatement::execute()
+      D:\private\calendar\vendor\laravel\framework\src\Illuminate\Database\Connection.php:458
+
+  Please use the argument -v to see more details.
+
+   ErrorException  : Undefined property: stdClass::$area_name
+
+  at D:\private\calendar\app\Console\Commands\NewsCommand.php:48
+    44|         $res = $client->get('gateway.chotot.com/v1/public/ad-listing?region_v2=3017&cg=2020&w=1&limit=20&st=s,k');
+    45|         $arr = json_decode( $res->getBody());
+    46|         $data = $arr->ads;
+    47|         foreach ($data as $value) {
+  > 48|             $title = str_slug($value->area_name, "-");
+    49|             $id = $value->list_id;
+    50|             $url = "https://xe.chotot.com/$title/mua-ban-xe-may/$id.htm";
+    51|             DB::table('news')->insert([
+    52|                 'list_id'      => $value->list_id,
+
+  Exception trace:
+
+  1   Illuminate\Foundation\Bootstrap\HandleExceptions::handleError("Undefined property: stdClass::$area_name", "D:\private\calendar\app\Console\Commands\NewsCommand.php")
+      D:\private\calendar\app\Console\Commands\NewsCommand.php:48
+
+  2   App\Console\Commands\NewsCommand::handle()
+      D:\private\calendar\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:32
+
+  Please use the argument -v to see more details.
+
+   Illuminate\Database\QueryException  : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '56739433' for key 'news_list_id_unique' (SQL: insert into `news` (`list_id`, `slug`, `subject`, `price_string`, `area_name`) values (56739433, https://xe.chotot.com/quan-hai-chau/mua-ban-xe-may/56739433.htm, HONDA WAVE RSX  BS 43  vành đúc đĩa MỚI KENG, 10.800.000 đ, Quận Hải Châu))
+
+  at D:\private\calendar\vendor\laravel\framework\src\Illuminate\Database\Connection.php:664
+    660|         // If an exception occurs when attempting to run a query, we'll format the error
+    661|         // message to include the bindings with SQL, which will make this exception a
+    662|         // lot more helpful to the developer instead of just the database's errors.
+    663|         catch (Exception $e) {
+  > 664|             throw new QueryException(
+    665|                 $query, $this->prepareBindings($bindings), $e
+    666|             );
+    667|         }
+    668|
+
+  Exception trace:
+
+  1   PDOException::("SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '56739433' for key 'news_list_id_unique'")
+      D:\private\calendar\vendor\laravel\framework\src\Illuminate\Database\Connection.php:458
+
+  2   PDOStatement::execute()
+      D:\private\calendar\vendor\laravel\framework\src\Illuminate\Database\Connection.php:458
+
+  Please use the argument -v to see more details.
+
+   Illuminate\Database\QueryException  : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '57773239' for key 'news_list_id_unique' (SQL: insert into `news` (`list_id`, `slug`, `subject`, `price_string`, `area_name`) values (57773239, https://xe.chotot.com/quan-ngu-hanh-son/mua-ban-xe-may/57773239.htm, Piaggio Vespa 3Vie Zin, 26.000.000 đ, Quận Ngũ Hành Sơn))
+
+  at D:\private\calendar\vendor\laravel\framework\src\Illuminate\Database\Connection.php:664
+    660|         // If an exception occurs when attempting to run a query, we'll format the error
+    661|         // message to include the bindings with SQL, which will make this exception a
+    662|         // lot more helpful to the developer instead of just the database's errors.
+    663|         catch (Exception $e) {
+  > 664|             throw new QueryException(
+    665|                 $query, $this->prepareBindings($bindings), $e
+    666|             );
+    667|         }
+    668|
+
+  Exception trace:
+
+  1   PDOException::("SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '57773239' for key 'news_list_id_unique'")
+      D:\private\calendar\vendor\laravel\framework\src\Illuminate\Database\Connection.php:458
+
+  2   PDOStatement::execute()
+      D:\private\calendar\vendor\laravel\framework\src\Illuminate\Database\Connection.php:458
+
+  Please use the argument -v to see more details.
+
+   Illuminate\Database\QueryException  : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '57773239' for key 'news_list_id_unique' (SQL: insert into `news` (`list_id`, `slug`, `subject`, `price_string`, `area_name`) values (57773239, https://xe.chotot.com/quan-ngu-hanh-son/mua-ban-xe-may/57773239.htm, Piaggio Vespa 3Vie Zin, 26.000.000 đ, Quận Ngũ Hành Sơn))
+
+  at D:\private\calendar\vendor\laravel\framework\src\Illuminate\Database\Connection.php:664
+    660|         // If an exception occurs when attempting to run a query, we'll format the error
+    661|         // message to include the bindings with SQL, which will make this exception a
+    662|         // lot more helpful to the developer instead of just the database's errors.
+    663|         catch (Exception $e) {
+  > 664|             throw new QueryException(
+    665|                 $query, $this->prepareBindings($bindings), $e
+    666|             );
+    667|         }
+    668|
+
+  Exception trace:
+
+  1   PDOException::("SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '57773239' for key 'news_list_id_unique'")
+      D:\private\calendar\vendor\laravel\framework\src\Illuminate\Database\Connection.php:458
+
+  2   PDOStatement::execute()
+      D:\private\calendar\vendor\laravel\framework\src\Illuminate\Database\Connection.php:458
+
+  Please use the argument -v to see more details.
+
+   Illuminate\Database\QueryException  : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '57773239' for key 'news_list_id_unique' (SQL: insert into `news` (`list_id`, `slug`, `subject`, `price_string`, `area_name`) values (57773239, https://xe.chotot.com/quan-ngu-hanh-son/mua-ban-xe-may/57773239.htm, Piaggio Vespa 3Vie Zin, 26.000.000 đ, Quận Ngũ Hành Sơn))
+
+  at D:\private\calendar\vendor\laravel\framework\src\Illuminate\Database\Connection.php:664
+    660|         // If an exception occurs when attempting to run a query, we'll format the error
+    661|         // message to include the bindings with SQL, which will make this exception a
+    662|         // lot more helpful to the developer instead of just the database's errors.
+    663|         catch (Exception $e) {
+  > 664|             throw new QueryException(
+    665|                 $query, $this->prepareBindings($bindings), $e
+    666|             );
+    667|         }
+    668|
+
+  Exception trace:
+
+  1   PDOException::("SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '57773239' for key 'news_list_id_unique'")
+      D:\private\calendar\vendor\laravel\framework\src\Illuminate\Database\Connection.php:458
+
+  2   PDOStatement::execute()
+      D:\private\calendar\vendor\laravel\framework\src\Illuminate\Database\Connection.php:458
+
+  Please use the argument -v to see more details.
+
+   Illuminate\Database\QueryException  : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '57773351' for key 'news_list_id_unique' (SQL: insert into `news` (`list_id`, `slug`, `subject`, `price_string`, `area_name`) values (57773351, https://xe.chotot.com/quan-hai-chau/mua-ban-xe-may/57773351.htm, Cần mua cặp pô xe CD 125, 79.000 đ, Quận Hải Châu))
+
+  at D:\private\calendar\vendor\laravel\framework\src\Illuminate\Database\Connection.php:664
+    660|         // If an exception occurs when attempting to run a query, we'll format the error
+    661|         // message to include the bindings with SQL, which will make this exception a
+    662|         // lot more helpful to the developer instead of just the database's errors.
+    663|         catch (Exception $e) {
+  > 664|             throw new QueryException(
+    665|                 $query, $this->prepareBindings($bindings), $e
+    666|             );
+    667|         }
+    668|
+
+  Exception trace:
+
+  1   PDOException::("SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '57773351' for key 'news_list_id_unique'")
+      D:\private\calendar\vendor\laravel\framework\src\Illuminate\Database\Connection.php:458
+
+  2   PDOStatement::execute()
+      D:\private\calendar\vendor\laravel\framework\src\Illuminate\Database\Connection.php:458
+
+  Please use the argument -v to see more details.
+
+   Illuminate\Database\QueryException  : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '57773351' for key 'news_list_id_unique' (SQL: insert into `news` (`list_id`, `slug`, `subject`, `price_string`, `area_name`) values (57773351, https://xe.chotot.com/quan-hai-chau/mua-ban-xe-may/57773351.htm, Cần mua cặp pô xe CD 125, 79.000 đ, Quận Hải Châu))
+
+  at D:\private\calendar\vendor\laravel\framework\src\Illuminate\Database\Connection.php:664
+    660|         // If an exception occurs when attempting to run a query, we'll format the error
+    661|         // message to include the bindings with SQL, which will make this exception a
+    662|         // lot more helpful to the developer instead of just the database's errors.
+    663|         catch (Exception $e) {
+  > 664|             throw new QueryException(
+    665|                 $query, $this->prepareBindings($bindings), $e
+    666|             );
+    667|         }
+    668|
+
+  Exception trace:
+
+  1   PDOException::("SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '57773351' for key 'news_list_id_unique'")
+      D:\private\calendar\vendor\laravel\framework\src\Illuminate\Database\Connection.php:458
+
+  2   PDOStatement::execute()
+      D:\private\calendar\vendor\laravel\framework\src\Illuminate\Database\Connection.php:458
+
+  Please use the argument -v to see more details.
+
+   Illuminate\Database\QueryException  : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '57773351' for key 'news_list_id_unique' (SQL: insert into `news` (`list_id`, `slug`, `subject`, `price_string`, `area_name`) values (57773351, https://xe.chotot.com/quan-hai-chau/mua-ban-xe-may/57773351.htm, Cần mua cặp pô xe CD 125, 79.000 đ, Quận Hải Châu))
+
+  at D:\private\calendar\vendor\laravel\framework\src\Illuminate\Database\Connection.php:664
+    660|         // If an exception occurs when attempting to run a query, we'll format the error
+    661|         // message to include the bindings with SQL, which will make this exception a
+    662|         // lot more helpful to the developer instead of just the database's errors.
+    663|         catch (Exception $e) {
+  > 664|             throw new QueryException(
+    665|                 $query, $this->prepareBindings($bindings), $e
+    666|             );
+    667|         }
+    668|
+
+  Exception trace:
+
+  1   PDOException::("SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '57773351' for key 'news_list_id_unique'")
+      D:\private\calendar\vendor\laravel\framework\src\Illuminate\Database\Connection.php:458
+
+  2   PDOStatement::execute()
+      D:\private\calendar\vendor\laravel\framework\src\Illuminate\Database\Connection.php:458
+
+  Please use the argument -v to see more details.
+
+   Illuminate\Database\QueryException  : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '57773351' for key 'news_list_id_unique' (SQL: insert into `news` (`list_id`, `slug`, `subject`, `price_string`, `area_name`) values (57773351, https://xe.chotot.com/quan-hai-chau/mua-ban-xe-may/57773351.htm, Cần mua cặp pô xe CD 125, 79.000 đ, Quận Hải Châu))
+
+  at D:\private\calendar\vendor\laravel\framework\src\Illuminate\Database\Connection.php:664
+    660|         // If an exception occurs when attempting to run a query, we'll format the error
+    661|         // message to include the bindings with SQL, which will make this exception a
+    662|         // lot more helpful to the developer instead of just the database's errors.
+    663|         catch (Exception $e) {
+  > 664|             throw new QueryException(
+    665|                 $query, $this->prepareBindings($bindings), $e
+    666|             );
+    667|         }
+    668|
+
+  Exception trace:
+
+  1   PDOException::("SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '57773351' for key 'news_list_id_unique'")
+      D:\private\calendar\vendor\laravel\framework\src\Illuminate\Database\Connection.php:458
+
+  2   PDOStatement::execute()
+      D:\private\calendar\vendor\laravel\framework\src\Illuminate\Database\Connection.php:458
+
+  Please use the argument -v to see more details.
