@@ -11,7 +11,6 @@
                 border: 1px solid rgba(255, 94, 58, 0.95);
             }
             .logo_header {
-                height: 50px;
                 padding: 5px;
                 text-align: center;
                 background-color: rgba(144, 99, 89, 0.95);
