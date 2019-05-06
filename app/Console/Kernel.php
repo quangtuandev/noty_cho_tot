@@ -25,7 +25,7 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $filePath = __DIR__.'\schedule.log';
-        $schedule->command('news:create')->everyMinute()->appendOutputTo($filePath);;
+        $schedule->command('news:create')->everyFiveMinutes()->appendOutputTo($filePath);;
 
         //  $schedule->call(function () {
            
